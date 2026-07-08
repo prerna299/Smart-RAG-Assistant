@@ -7,7 +7,7 @@ load_dotenv()
 def get_zylos():
 
     return ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash",
+        model="gemini-2.5-flash Lite",
         temperature=0.3,
         google_api_key=os.getenv("GOOGLE_API_KEY")
     )

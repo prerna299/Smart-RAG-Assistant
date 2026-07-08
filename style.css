@@ -1,0 +1,550 @@
+/* ===============================
+   IMPORT FONT
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"]{
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===============================
+   MAIN BACKGROUND
+================================ */
+
+.stApp{
+    background:linear-gradient(135deg,#32c9f8,#f2a034,#707bf6);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+/* ===============================
+   REMOVE STREAMLIT HEADER
+================================ */
+
+header{
+    background: transparent !important;
+}
+
+footer{
+    visibility:hidden;
+}
+
+/* ===============================
+   TITLE
+================================ */
+
+.title{
+
+text-align:center;
+
+padding:20px;
+
+margin-bottom:20px;
+
+background:rgba(255,255,255,0.18);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:0 8px 30px rgba(0,0,0,.2);
+
+}
+
+.title h1{
+
+color:white;
+
+font-size:clamp(30px,5vw,60px);
+
+font-weight:700;
+
+margin-bottom:5px;
+
+}
+
+.title p{
+
+color:white;
+
+font-size:18px;
+
+}
+
+/* ===============================
+   WELCOME
+================================ */
+
+.welcome-box{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+height:80vh;
+
+animation:fadeIn 2s;
+
+}
+
+.welcome-box h1{
+
+font-size:55px;
+
+color:white;
+
+}
+
+.welcome-box h2{
+
+font-size:32px;
+
+color:white;
+
+margin-top:20px;
+
+text-align:center;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+
+section[data-testid="stSidebar"]{
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+
+}
+
+section[data-testid="stSidebar"] *{
+
+color:rgb(226, 9, 9);
+
+}
+
+/* ===============================
+   FILE UPLOADER
+================================ */
+
+div[data-testid="stFileUploader"]{
+
+background:white;
+
+border-radius:20px;
+
+padding:20px;
+
+border:3px dashed #6C63FF;
+
+}
+
+/* ===============================
+   TEXT INPUT
+================================ */
+
+.stTextInput input{
+
+border-radius:15px;
+
+border:2px solid #eeeef4;
+
+padding:12px;
+
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.stButton button{
+
+width:100%;
+
+border-radius:18px;
+
+background:linear-gradient(90deg,#FF4B91,#6C63FF);
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+border:none;
+
+padding:12px;
+
+transition:.4s;
+
+}
+
+.stButton button:hover{
+
+transform:scale(1.05);
+
+background:linear-gradient(90deg,#05161a,#43E97B);
+
+}
+
+/* ===============================
+   CHAT MESSAGE
+================================ */
+
+[data-testid="stChatMessage"]{
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+padding:15px;
+
+margin-bottom:15px;
+
+color:white;
+
+}
+
+/* ===============================
+   THINKING BOX
+================================ */
+
+.thinking{
+
+padding:15px;
+
+background:#ffffff30;
+
+border-radius:15px;
+
+font-weight:600;
+
+color:white;
+
+animation:pulse 1s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{opacity:.5;}
+
+50%{opacity:1;}
+
+100%{opacity:.5;}
+
+}
+
+/* ===============================
+   SUCCESS BOX
+================================ */
+
+.stSuccess{
+
+border-radius:15px;
+
+}
+
+/* ===============================
+   INFO BOX
+================================ */
+
+.stInfo{
+
+border-radius:15px;
+
+}
+
+/* ===============================
+   EXPANDER
+================================ */
+
+.streamlit-expanderHeader{
+
+font-weight:bold;
+
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer{
+
+text-align:center;
+
+font-size:18px;
+
+padding:20px;
+
+color:white;
+
+margin-top:40px;
+
+}
+
+/* ===============================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:white;
+
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:transparent;
+
+}
+
+/* ========================= */
+/* ==============================
+        ZYLOS FLOATING BUTTON
+================================ */
+
+.zylos-container{
+
+position:fixed;
+
+bottom:max(20px, env(safe-area-inset-bottom));
+
+right:max(20px, env(safe-area-inset-right));
+
+z-index:9999;
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+.zylos-container button{
+
+width:75px !important;
+
+height:75px !important;
+
+border-radius:50% !important;
+
+border:none !important;
+
+background:linear-gradient(135deg,#6C63FF,#00E5FF) !important;
+
+font-size:34px !important;
+
+color:white !important;
+
+cursor:pointer;
+
+box-shadow:0 10px 35px rgba(0,229,255,.45);
+
+transition:.3s;
+
+}
+
+.zylos-container button:hover{
+
+transform:scale(1.12);
+
+box-shadow:0 15px 45px rgba(108,99,255,.8);
+
+}
+
+.zylos-label{
+
+margin-top:8px;
+
+text-align:center;
+
+font-weight:600;
+
+font-size:14px;
+
+color:white;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(12px);
+
+padding:5px 10px;
+
+border-radius:15px;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@media screen and (max-width:1024px){
+
+.title h1{
+
+font-size:38px;
+
+}
+
+.title p{
+
+font-size:16px;
+
+}
+
+.stButton button{
+
+font-size:16px;
+
+}
+
+}
+
+@media screen and (max-width:768px){
+
+.title{
+
+padding:15px;
+
+}
+
+.title h1{
+
+font-size:28px;
+
+}
+
+.title p{
+
+font-size:14px;
+
+}
+
+.welcome-box h1{
+
+font-size:38px;
+
+}
+
+.welcome-box h2{
+
+font-size:22px;
+
+}
+
+.stButton button{
+
+width:100%;
+
+font-size:15px;
+
+padding:12px;
+
+}
+
+div[data-testid="stFileUploader"]{
+
+padding:12px;
+
+}
+
+}
+
+@media screen and (max-width:480px){
+
+.title h1{
+
+font-size:24px;
+
+}
+
+.title p{
+
+font-size:13px;
+
+}
+
+.welcome-box{
+
+height:auto;
+
+padding:30px 15px;
+
+}
+
+.welcome-box h1{
+
+font-size:30px;
+
+}
+
+.welcome-box h2{
+
+font-size:18px;
+
+}
+
+}

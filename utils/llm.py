@@ -4,7 +4,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 
-def get_zylos():
+def get_llm():
 
     return ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",

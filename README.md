@@ -269,6 +269,11 @@ Contributions, feature requests, and suggestions are welcome.
 
 ---
 
+Live 🔗
+https://smart-rag-assistant-abxspu8ufdjudnwuzbospp.streamlit.app/
+
+---
+
 # 📄 License
 
 This project is licensed under the MIT License.
